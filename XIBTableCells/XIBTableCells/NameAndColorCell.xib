@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTableIdentifier" rowHeight="65" id="ayy-Ve-wM3" customClass="NameAndColorCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ayy-Ve-wM3" id="1CM-i5-LWO">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btd-iH-WU6">
+                        <rect key="frame" x="71" y="12" width="241" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" text="Color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHf-JS-ohl">
+                        <rect key="frame" x="4" y="38" width="48" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjI-4R-p5Y">
+                        <rect key="frame" x="75" y="36" width="237" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvx-jq-9aY">
+                        <rect key="frame" x="4" y="8" width="48" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="XjI-4R-p5Y" secondAttribute="trailing" id="02k-dH-dhB"/>
+                    <constraint firstItem="btd-iH-WU6" firstAttribute="leading" secondItem="wvx-jq-9aY" secondAttribute="trailing" constant="19" id="19X-8W-lhS"/>
+                    <constraint firstItem="IHf-JS-ohl" firstAttribute="width" secondItem="wvx-jq-9aY" secondAttribute="width" id="5gf-Rc-ZJH"/>
+                    <constraint firstItem="IHf-JS-ohl" firstAttribute="top" secondItem="wvx-jq-9aY" secondAttribute="bottom" constant="6" id="7fJ-VI-ync"/>
+                    <constraint firstItem="IHf-JS-ohl" firstAttribute="firstBaseline" secondItem="XjI-4R-p5Y" secondAttribute="baseline" id="Dpk-4y-Qbs"/>
+                    <constraint firstItem="wvx-jq-9aY" firstAttribute="leading" secondItem="1CM-i5-LWO" secondAttribute="leadingMargin" constant="-4" id="IYK-Fv-ilz"/>
+                    <constraint firstItem="IHf-JS-ohl" firstAttribute="baseline" secondItem="XjI-4R-p5Y" secondAttribute="baseline" id="Jtz-bj-B3k"/>
+                    <constraint firstItem="wvx-jq-9aY" firstAttribute="baseline" secondItem="btd-iH-WU6" secondAttribute="baseline" id="Zxm-Ls-bfv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="btd-iH-WU6" secondAttribute="trailing" id="f59-lC-Qfi"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="IHf-JS-ohl" secondAttribute="bottom" id="gBB-Wh-DKQ"/>
+                    <constraint firstAttribute="topMargin" secondItem="wvx-jq-9aY" secondAttribute="top" id="u5j-tf-rJ7"/>
+                    <constraint firstItem="IHf-JS-ohl" firstAttribute="leading" secondItem="1CM-i5-LWO" secondAttribute="leadingMargin" constant="-4" id="uR1-Kp-6f7"/>
+                    <constraint firstItem="XjI-4R-p5Y" firstAttribute="leading" secondItem="IHf-JS-ohl" secondAttribute="trailing" constant="23" id="xfD-DH-XBf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="colorLabel" destination="XjI-4R-p5Y" id="t4o-5b-vhn"/>
+                <outlet property="nameLabel" destination="btd-iH-WU6" id="hbd-MZ-n3g"/>
+            </connections>
+            <point key="canvasLocation" x="312" y="381.5"/>
+        </tableViewCell>
+    </objects>
+</document>
