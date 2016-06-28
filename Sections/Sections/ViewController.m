@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SearchResultsController.h"
 
 static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 
@@ -17,6 +18,8 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 @property (copy, nonatomic) NSArray *keys;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) UISearchController *searchController;
 
 @end
 
@@ -31,6 +34,21 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     
     self.names = [NSDictionary dictionaryWithContentsOfFile: path];
     self.keys = [[self.names allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    
+    SearchResultsController *resultsController = [[SearchResultsController alloc]initWithNames:self.names keys:self.keys];
+    self.searchController = [[UISearchController alloc]initWithSearchResultsController:resultsController];
+    
+    UISearchBar *searchBar = self.searchController.searchBar;
+    searchBar.scopeButtonTitles = @[@"All", @"Short", @"Long"];
+    searchBar.placeholder = @"Enter a search name";
+    [searchBar sizeToFit];
+    
+    self.tableView.tableHeaderView = searchBar;
+    self.searchController.searchResultsUpdater = resultsController;
+    
+    self.tableView.sectionIndexBackgroundColor = [UIColor blackColor];
+    self.tableView.sectionIndexTrackingBackgroundColor = [UIColor darkGrayColor];
+    self.tableView.sectionIndexColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,5 +84,10 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     cell.textLabel.text = nameSection[indexPath.row];
     
     return cell;
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    
+    return self.keys;
 }
 @end

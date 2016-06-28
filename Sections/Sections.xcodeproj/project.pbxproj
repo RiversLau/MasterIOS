@@ -16,6 +16,7 @@
 		3F9B22651D227ADF00D5DC28 /* SectionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B22641D227ADF00D5DC28 /* SectionsTests.m */; };
 		3F9B22701D227ADF00D5DC28 /* SectionsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B226F1D227ADF00D5DC28 /* SectionsUITests.m */; };
 		3F9B227E1D227B4900D5DC28 /* sortednames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B227D1D227B4900D5DC28 /* sortednames.plist */; };
+		3F9B22811D22859500D5DC28 /* SearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B22801D22859500D5DC28 /* SearchResultsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		3F9B226F1D227ADF00D5DC28 /* SectionsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionsUITests.m; sourceTree = "<group>"; };
 		3F9B22711D227ADF00D5DC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F9B227D1D227B4900D5DC28 /* sortednames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sortednames.plist; sourceTree = "<group>"; };
+		3F9B227F1D22859500D5DC28 /* SearchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsController.h; sourceTree = "<group>"; };
+		3F9B22801D22859500D5DC28 /* SearchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				3F9B22581D227ADF00D5DC28 /* LaunchScreen.storyboard */,
 				3F9B225B1D227ADF00D5DC28 /* Info.plist */,
 				3F9B224A1D227ADF00D5DC28 /* Supporting Files */,
+				3F9B227F1D22859500D5DC28 /* SearchResultsController.h */,
+				3F9B22801D22859500D5DC28 /* SearchResultsController.m */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9B22811D22859500D5DC28 /* SearchResultsController.m in Sources */,
 				3F9B22521D227ADF00D5DC28 /* ViewController.m in Sources */,
 				3F9B224F1D227ADF00D5DC28 /* AppDelegate.m in Sources */,
 				3F9B224C1D227ADF00D5DC28 /* main.m in Sources */,
