@@ -22,6 +22,8 @@
     
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     self.sections = @[@{@"header" : @"First Witch",
                         @"content" : @"Hey, when will the three of us meet up later?"},
                       @{@"header" : @"Second Witch",
@@ -36,6 +38,7 @@
                         @"content" : @"I guess we'll see Mac there."}];
     
     [self.collectionView registerClass:[ContentCell class] forCellWithReuseIdentifier:@"CONTENT"];
+    [self.collectionView registerClass:[HeaderCell class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HEADER" ];
     
     UIEdgeInsets contentInset = self.collectionView.contentInset;
     contentInset.top = 20;
@@ -44,6 +47,8 @@
     UICollectionViewLayout *layout = self.collectionView.collectionViewLayout;
     UICollectionViewFlowLayout *flow = (UICollectionViewFlowLayout *)layout;
     flow.sectionInset = UIEdgeInsetsMake(10, 20, 30, 20);
+    
+    flow.headerReferenceSize = CGSizeMake(100, 25);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,5 +91,18 @@
     cell.text = words[indexPath.row];
     
     return cell;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    if ([kind isEqualToString: UICollectionElementKindSectionHeader]) {
+        HeaderCell *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"HEADER" forIndexPath:indexPath];
+        cell.maxWidth = collectionView.bounds.size.width;
+        cell.text = self.sections[indexPath.section][@"header"];
+        
+        return cell;
+    }
+    
+    return nil;
 }
 @end
