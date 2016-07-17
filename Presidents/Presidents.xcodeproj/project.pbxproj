@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		736A75FF1D3A7B620077B374 /* PresidentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 736A75FE1D3A7B620077B374 /* PresidentList.plist */; };
+		736A76021D3A8FB10077B374 /* LanguageListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736A76011D3A8FB10077B374 /* LanguageListController.m */; };
+		736A76051D3B219F0077B374 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736A76041D3B219F0077B374 /* RootViewController.m */; };
 		73A027061D28FE6100F2469B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A027051D28FE6100F2469B /* main.m */; };
 		73A027091D28FE6100F2469B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A027081D28FE6100F2469B /* AppDelegate.m */; };
 		73A0270C1D28FE6100F2469B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A0270B1D28FE6100F2469B /* MasterViewController.m */; };
@@ -36,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		736A75FE1D3A7B620077B374 /* PresidentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PresidentList.plist; sourceTree = "<group>"; };
+		736A76001D3A8FB10077B374 /* LanguageListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageListController.h; sourceTree = "<group>"; };
+		736A76011D3A8FB10077B374 /* LanguageListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageListController.m; sourceTree = "<group>"; };
+		736A76031D3B219F0077B374 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		736A76041D3B219F0077B374 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		73A027011D28FE6100F2469B /* Presidents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presidents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A027051D28FE6100F2469B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		73A027071D28FE6100F2469B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,6 +112,7 @@
 		73A027031D28FE6100F2469B /* Presidents */ = {
 			isa = PBXGroup;
 			children = (
+				736A75FE1D3A7B620077B374 /* PresidentList.plist */,
 				73A027071D28FE6100F2469B /* AppDelegate.h */,
 				73A027081D28FE6100F2469B /* AppDelegate.m */,
 				73A0270A1D28FE6100F2469B /* MasterViewController.h */,
@@ -115,6 +124,10 @@
 				73A027151D28FE6100F2469B /* LaunchScreen.storyboard */,
 				73A027181D28FE6100F2469B /* Info.plist */,
 				73A027041D28FE6100F2469B /* Supporting Files */,
+				736A76001D3A8FB10077B374 /* LanguageListController.h */,
+				736A76011D3A8FB10077B374 /* LanguageListController.m */,
+				736A76031D3B219F0077B374 /* RootViewController.h */,
+				736A76041D3B219F0077B374 /* RootViewController.m */,
 			);
 			path = Presidents;
 			sourceTree = "<group>";
@@ -251,6 +264,7 @@
 				73A027171D28FE6100F2469B /* LaunchScreen.storyboard in Resources */,
 				73A027141D28FE6100F2469B /* Assets.xcassets in Resources */,
 				73A027121D28FE6100F2469B /* Main.storyboard in Resources */,
+				736A75FF1D3A7B620077B374 /* PresidentList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +291,9 @@
 			files = (
 				73A027091D28FE6100F2469B /* AppDelegate.m in Sources */,
 				73A0270C1D28FE6100F2469B /* MasterViewController.m in Sources */,
+				736A76051D3B219F0077B374 /* RootViewController.m in Sources */,
 				73A027061D28FE6100F2469B /* main.m in Sources */,
+				736A76021D3A8FB10077B374 /* LanguageListController.m in Sources */,
 				73A0270F1D28FE6100F2469B /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +520,7 @@
 				73A027331D28FE6100F2469B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73A027341D28FE6100F2469B /* Build configuration list for PBXNativeTarget "PresidentsTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +529,7 @@
 				73A027361D28FE6100F2469B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73A027371D28FE6100F2469B /* Build configuration list for PBXNativeTarget "PresidentsUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +538,7 @@
 				73A027391D28FE6100F2469B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
