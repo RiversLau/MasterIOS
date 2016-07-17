@@ -15,6 +15,7 @@
 		736A766A1D3B71190077B374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736A76681D3B71190077B374 /* LaunchScreen.storyboard */; };
 		736A76751D3B71190077B374 /* PersistenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 736A76741D3B71190077B374 /* PersistenceTests.m */; };
 		736A76801D3B71190077B374 /* PersistenceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 736A767F1D3B71190077B374 /* PersistenceUITests.m */; };
+		736A768F1D3B7F1F0077B374 /* FourLines.m in Sources */ = {isa = PBXBuildFile; fileRef = 736A768E1D3B7F1F0077B374 /* FourLines.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		736A767B1D3B71190077B374 /* PersistenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		736A767F1D3B71190077B374 /* PersistenceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersistenceUITests.m; sourceTree = "<group>"; };
 		736A76811D3B71190077B374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		736A768D1D3B7F1F0077B374 /* FourLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourLines.h; sourceTree = "<group>"; };
+		736A768E1D3B7F1F0077B374 /* FourLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourLines.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				736A76681D3B71190077B374 /* LaunchScreen.storyboard */,
 				736A766B1D3B71190077B374 /* Info.plist */,
 				736A765A1D3B71190077B374 /* Supporting Files */,
+				736A768D1D3B7F1F0077B374 /* FourLines.h */,
+				736A768E1D3B7F1F0077B374 /* FourLines.m */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				736A76621D3B71190077B374 /* ViewController.m in Sources */,
+				736A768F1D3B7F1F0077B374 /* FourLines.m in Sources */,
 				736A765F1D3B71190077B374 /* AppDelegate.m in Sources */,
 				736A765C1D3B71190077B374 /* main.m in Sources */,
 			);
@@ -498,6 +504,7 @@
 				736A76861D3B71190077B374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		736A76871D3B71190077B374 /* Build configuration list for PBXNativeTarget "PersistenceTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +513,7 @@
 				736A76891D3B71190077B374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		736A768A1D3B71190077B374 /* Build configuration list for PBXNativeTarget "PersistenceUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +522,7 @@
 				736A768C1D3B71190077B374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

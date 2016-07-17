@@ -7,10 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "FourLines.h"
 
 @interface ViewController ()
 
 @end
+
+static NSString *const kRooKey = @"kRootKey";
 
 @implementation ViewController
 
@@ -20,10 +23,14 @@
     
     NSString *filePath = [self dataFilePath];
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-        NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
-        for (int i = 0; i < array.count; i++) {
+        NSMutableData *data = [[NSMutableData alloc]initWithContentsOfFile:filePath];
+        NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc]initForReadingWithData:data];
+        FourLines *fourLines = [unarchiver decodeObjectForKey:kRooKey];
+        [unarchiver finishDecoding];
+        
+        for (int i = 0; i < 4; i++) {
             UITextField *theField = self.lineFields[i];
-            theField.text = array[i];
+            theField.text = fourLines.lines[i];
         }
     }
     
@@ -41,13 +48,21 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentPath = paths[0];
     
-    return [documentPath stringByAppendingPathComponent:@"data.plist"];
+    return [documentPath stringByAppendingPathComponent:@"data.archive"];
 }
 
 - (void)applicationWillResignActive:(NSNotification *)notification {
     
     NSString *filePath = [self dataFilePath];
-    NSArray *array = [self.lineFields valueForKey:@"text"];
-    [array writeToFile:filePath atomically:YES];
+    
+    FourLines *fourLines = [[FourLines alloc]init];
+    fourLines.lines = [self.lineFields valueForKey:@"text"];
+    
+    NSMutableData *data = [[NSMutableData alloc]init];
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc]initForWritingWithMutableData:data];
+    [archiver encodeObject:fourLines forKey:kRooKey];
+    [archiver finishEncoding];
+    
+    [data writeToFile:filePath atomically:YES];
 }
 @end
