@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Main View">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g40-j5-XTP">
+                                <rect key="frame" x="0.0" y="546" width="600" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="XAs-qH-rjQ"/>
+                                </constraints>
+                                <state key="normal" title="Pick from Library"/>
+                                <connections>
+                                    <action selector="selectExistingPictureOrVideo:" destination="BYZ-38-t0r" eventType="touchDragInside" id="DGI-MN-UbM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tgo-70-fN9">
+                                <rect key="frame" x="0.0" y="28" width="600" height="472"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mD-qV-cKe">
+                                <rect key="frame" x="0.0" y="508" width="600" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="L9j-2C-cDb"/>
+                                </constraints>
+                                <state key="normal" title="New Photo Or Video"/>
+                                <connections>
+                                    <action selector="shootPictureOrVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9w-LH-POK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4mD-qV-cKe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="7Y4-KS-Opx"/>
+                            <constraint firstItem="Tgo-70-fN9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="98S-RW-fQT"/>
+                            <constraint firstItem="g40-j5-XTP" firstAttribute="top" secondItem="4mD-qV-cKe" secondAttribute="bottom" constant="8" id="B9L-yc-DxI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g40-j5-XTP" secondAttribute="bottom" constant="24" id="OfP-51-aG8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g40-j5-XTP" secondAttribute="trailing" constant="-20" id="Ofu-j0-C3f"/>
+                            <constraint firstItem="g40-j5-XTP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="TnF-FA-4KD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tgo-70-fN9" secondAttribute="trailing" constant="-20" id="epB-Du-PfE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4mD-qV-cKe" secondAttribute="trailing" constant="-20" id="jT0-aS-vgG"/>
+                            <constraint firstItem="Tgo-70-fN9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="mwc-vz-S2J"/>
+                            <constraint firstItem="4mD-qV-cKe" firstAttribute="top" secondItem="Tgo-70-fN9" secondAttribute="bottom" constant="8" id="om8-wd-6WP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Tgo-70-fN9" id="Rpz-qL-YGv"/>
+                        <outlet property="takePictureButton" destination="4mD-qV-cKe" id="hv7-4Q-8cu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358" y="339"/>
+        </scene>
+    </scenes>
+</document>
